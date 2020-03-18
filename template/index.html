@@ -133,8 +133,11 @@
     {{#if article.description}}
       <p>{{{nl2br article.description}}}</p>
     {{/if}}
+
+    {{#if article.showUrl }}
     <span class="type type__{{toLowerCase article.type}}">{{toLowerCase article.type}}</span>
     <pre class="prettyprint language-html" data-type="{{toLowerCase article.type}}"><code>{{article.url}}</code></pre>
+    {{/if }}
 
     {{#if article.permission}}
       <p>
@@ -351,7 +354,10 @@
       {{/if}}
     {{/if}}
 
+    {{#if article.showUrl }}
     <pre class="prettyprint language-html" data-type="{{toLowerCase article.type}}"><code>{{{showDiff article.url compare.url}}}</code></pre>
+    {{/if }}
+
 
     {{subTemplate "article-compare-permission" article=article compare=compare}}
 
