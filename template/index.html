@@ -195,7 +195,7 @@
         <tbody>
         {{#each this}}
           <tr>
-            <td class="code">{{{splitFill field "." "&nbsp;&nbsp;"}}}{{#if optional}} <span class="label label-optional">{{__ "optional"}}</span>{{/if}}</td>
+            <td class="code">{{{field}}}{{#if optional}} <span class="label label-optional">{{__ "optional"}}</span>{{/if}}</td>
             {{#if ../../_hasType}}
               <td>
                 {{{type}}}
@@ -586,7 +586,7 @@
       {{#if typeSame}}
         <tr>
           <td class="code">
-            {{{splitFill source.field "." "&nbsp;&nbsp;"}}}
+            {{{source.field}}}
             {{#if source.optional}}
               {{#if compare.optional}} <span class="label label-optional">{{__ "optional"}}</span>
               {{else}} <span class="label label-optional label-ins">{{__ "optional"}}</span>
@@ -619,7 +619,7 @@
       {{#if typeIns}}
         <tr class="ins">
           <td class="code">
-            {{{splitFill source.field "." "&nbsp;&nbsp;"}}}
+            {{{source.field}}}
             {{#if source.optional}} <span class="label label-optional label-ins">{{__ "optional"}}</span>{{/if}}
           </td>
 
@@ -639,7 +639,7 @@
       {{#if typeDel}}
         <tr class="del">
           <td class="code">
-            {{{splitFill compare.field "." "&nbsp;&nbsp;"}}}
+            {{{compare.field}}}
             {{#if compare.optional}} <span class="label label-optional label-del">{{__ "optional"}}</span>{{/if}}
           </td>
 
