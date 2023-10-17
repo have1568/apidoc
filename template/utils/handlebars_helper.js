@@ -135,7 +135,7 @@ define([
      */
     Handlebars.registerHelper('splitFill', function(value, splitChar, fillChar) {
         var splits = value.split(splitChar);
-        return new Array(splits.length).join(fillChar) + splits[splits.length - 1];
+        return value;
     });
 
     /**
